@@ -12,8 +12,19 @@ document.getElementById('Formulario').addEventListener('submit', function(event)
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data); // Tratar a resposta aqui
-        // Aqui você pode atualizar o DOM ou mostrar alguma mensagem baseada na resposta
+        console.log(data);  // Logar a resposta no console para diagnóstico
+        if (data.transportadora) {
+            document.getElementById('primeira').textContent = 'Primeira Transportadora: ' + data.transportadora;
+            // Se houver uma segunda transportadora, atualize-a aqui também
+            // document.getElementById('segunda').textContent = 'Segunda Transportadora: ' + data.segundaTransportadora;
+        } else {
+            // Altere esse valor para o que você quiser exibir quando não houver dados
+            document.getElementById('primeira').textContent = 'Nenhuma transportadora encontrada';
+            alert('Nenhuma transportadora encontrada para a cidade especificada.');
+        }
     })
-    .catch(error => console.error('Erro ao fazer a requisição:', error));
+    .catch(error => {
+        console.error('Erro ao fazer a requisição:', error);
+        alert('Erro ao conectar com o servidor.');
+    });
 });
