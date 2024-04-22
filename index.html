@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neste site temos a indicação de quais as melhores transportadoras para a cidade do pedido. Através da indicação da cidade pelo consultor, e integração com inteligência artifical, as melhores transportadoras serão informadas na tela ao usuário" />
+    <title>TE Transportadoras BMC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:wght@300&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://visualpharm.com/assets/345/Garbage%20Truck-595b40b65ba036ed117d13e5.svg">
+</head>
+<body>
+    <div id="container">
+        <h2 class="titulo">Consulta Transportadoras BMC</h2>
+        <form action class="Formulario" id="Formulario">
+            <label for="cidade">Qual a cidade de entrega do pedido?</label>
+            <p>
+            <input
+                class="campo-cidade"
+                type="text"
+                name="cidade"
+                id="cidade"
+                placeholder="Piracicaba"
+                required
+            />
+            </p>
+            <input
+            type="submit"
+            name="button"
+            value="Enviar"
+            class="FormSubmit"
+            />
+            <div id="primeira-transportadora">
+                Primeira Transportadora: <span id="primeira">0,00</span>
+                </div>
+            <div id="segunda-transportadora">
+            Segunda Transportadora: <span id="segunda">0,00</span>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
