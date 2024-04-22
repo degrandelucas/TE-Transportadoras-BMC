@@ -7,7 +7,7 @@ from sheets_api import get_data_from_sheet
 app = Flask(__name__)
 
 # Substitua 'your_api_key_here' pela sua chave de API real da OpenAI.
-openai_api_key = os.getenv("OPENAI_API_KEY", "your_api_key_here")
+openai_api_key = os.getenv("OPENAI_API_KEY", "sk-proj-QcKDZF9MdpycqMHgLKCTT3BlbkFJLbOTG2B51HgrEq8jFi1D")
 
 @app.route('/consultar-transportadora', methods=['POST', 'OPTIONS'])
 def consultar_transportadora():
