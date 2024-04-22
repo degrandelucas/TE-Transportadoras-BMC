@@ -36,10 +36,9 @@
     height: auto;
     width: 32rem;
     position: fixed;
-    top: 10rem;
+    top: 7rem;
     left: 50%;
     transform: translatex(-50%);
-    max-width: 100rem;
     background-color: var(--background-color-container);
     box-shadow: 0.3rem 0.3rem 0.4rem black;
     border-radius: 2rem;
